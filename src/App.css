@@ -1,0 +1,233 @@
+/* #root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+} */
+
+* {
+  padding: 0;
+  margin: 0;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+
+nav {
+  /* width: 100%; */
+  height: 30px;
+  background-color: rgb(0, 141, 0);
+  color: white;
+  padding: 1rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+  gap: 1rem;
+  margin-bottom: 40px;
+}
+
+nav .nav-ul {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+nav .nav-li {
+  list-style: none;
+
+}
+
+nav .nav-li a {
+  font-size: 1.2rem;
+  font-weight: 600;
+  padding: 1rem;
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+  transition: color 0.2s ease-in-out;
+}
+
+nav .nav-li a:hover {
+  color: rgb(13, 219, 116);
+  transition: color 0.2s ease-in-out;
+}
+
+nav .nav-li a:active {
+  color: rgb(1, 255, 1);
+}
+
+.App {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.note-input {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.note-input input {
+  padding: 1rem;
+  border: 1px solid rgb(21, 219, 21);
+  border-radius: 5px;
+  width: 400px;
+  transition: width 0.3s cubic-bezier(0.6, -0.28, 0.735, 0.045);
+}
+
+.note-input input:hover {
+  border: 1px solid #ccc;
+  width: 420px;
+  transition: width 0.3s cubic-bezier(0.6, -0.28, 0.735, 0.045) ease-in-out;
+}
+
+.note-input input:active {
+  box-shadow: 0 0 5px green;
+  animation: shake 0.3s ease-in-out;
+}
+
+@keyframes shake {
+
+  25% {
+    transform: translateX(5px);
+  }
+
+  50% {
+    transform: translateX(-5px);
+  }
+
+  75% {
+    transform: translateX(5px);
+  }
+}
+
+.note-input button {
+  width: 70px;
+  padding: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: rgb(21, 219, 21);
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.note-input button:hover {
+  background-color: rgb(1, 255, 1);
+  transition: background-color 0.3s ease-in-out;
+}
+
+.note-input button:active {
+  transform: scale(0.92);
+  transition: transform 0.2s ease-in-out;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.7);
+}
+
+.note-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  width: 50%;
+  margin: 20px auto;
+}
+
+.note-item {
+  padding: 0.7rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.delete-btn {
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  cursor: pointer;
+  background-color: rgb(219, 21, 21);
+  color: #fff;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.delete-btn:hover {
+  background-color: #fd0800;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.delete-btn:active {
+  transform: scale(0.92);
+  transition: transform 0.2s ease-in-out;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.7);
+  animation: shake 0.3s ease-in-out;
+}
+
+/* color generator */
+
+.color-generator {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.color-generator input[type="color"] {
+  /* width: 100%; */
+  /* padding: 1rem; */
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.color-generator input[type="range"] {
+  width: 17%;
+  /* padding: 1rem; */
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.color-generator button {
+  width: 70px;
+  padding: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: rgb(162, 194, 162);
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.color-generator button:hover {
+  background-color: rgb(188, 224, 188);
+  transition: background-color 0.3s ease-in-out;
+}
+
+.color-generator button:active {
+  transform: scale(0.92);
+  transition: transform 0.2s ease-in-out;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.7);
+}
+
+.color-generator .color-box {
+  width: 100px;
+  height: 100px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.color-generator .color-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
